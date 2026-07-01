@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    [SerializeField]private float speed;
+    [Header("Referencias")]
     [SerializeField]private Rigidbody2D rb;
     private Collider2D col;
     public GameManager gameManager;
+    [Header("Configurações")]
+    [SerializeField]private float speed;
     
     void Start()
     {
@@ -36,12 +38,18 @@ public class Ball : MonoBehaviour
         if (col.gameObject.CompareTag("right"))
         {
             Debug.Log("Esquerda fez ponto");   
-            gameManager.PlayerPoint();         
+            gameManager.PlayerPoint();
+            RestartPosition();
         }
         if (col.gameObject.CompareTag("left"))
         {
             Debug.Log("Direita fez ponto");
             gameManager.EnemyPoint();
+            RestartPosition();
         }
+    }
+    void RestartPosition()
+    {
+        transform.position = new Vector3(0, 0, 0);
     }
 }

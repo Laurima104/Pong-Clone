@@ -39,6 +39,7 @@
      <Compile Include="Assets\Script\GameManager.cs" />
      <Compile Include="Assets\Script\Players\Player.cs" />
      <Compile Include="Assets\Script\Ball.cs" />
+     <Compile Include="Assets\Script\Players\CpuMovement.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

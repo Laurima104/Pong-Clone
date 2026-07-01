@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [Header("Referencias")]
     [SerializeField] private Transform position;
-    [SerializeField] private float velocity;
-    [SerializeField] private bool isPlayer;
+    [Header("Configurações")]
+    [SerializeField] private float velocity = 5;
+    [SerializeField] public bool isPlayer;
     [SerializeField] private int playerId;
     void Update()
     {
@@ -15,13 +17,12 @@ public class Player : MonoBehaviour
             if (playerId == 1 && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)))
             {
                 Movement();
-            } else if(playerId == 2 && (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow)))
+            }
+            else if (playerId == 2 && (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow)))
             {
                 Movement();
             }
         }
-
-
     }
     void Movement()
     {
