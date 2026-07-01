@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 74520729}
   - component: {fileID: 74520728}
   - component: {fileID: 74520730}
+  - component: {fileID: 74520731}
   - component: {fileID: 74520727}
   m_Layer: 0
   m_Name: block (1)
@@ -246,10 +247,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {fileID: 74520729}
-  ballPosition: {fileID: 226391863}
   velocity: 5
-  isPlayer: 0
+  isPlayer: 1
   playerId: 2
+--- !u!114 &74520731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74520726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20797aaa8d73dc04f91d4c6727b91778, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bolaTransform: {fileID: 226391866}
+  cpuSpeed: 5
+  intervaloAtualizacao: 0.02
 --- !u!1 &226391863
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,9 +383,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b87291c575e9a04d86c118936d8f207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
   rb: {fileID: 0}
   gameManager: {fileID: 286741709}
+  speed: 5
 --- !u!58 &226391868
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -416,8 +431,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c505d6d57f2950b4480317b1c148b897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerScore: 0
-  EnemyScore: 0
   ScorePlayer: {fileID: 638745898}
   ScoreEnemy: {fileID: 1393015408}
 --- !u!4 &286741710
@@ -1293,7 +1306,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {fileID: 2064400811}
-  ballPosition: {fileID: 0}
   velocity: 5
   isPlayer: 1
   playerId: 1
