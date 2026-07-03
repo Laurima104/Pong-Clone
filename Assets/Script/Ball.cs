@@ -24,11 +24,11 @@ public class Ball : MonoBehaviour
 
         if(Random.value < 0.5f)
         {
-            direction = Vector2.left;
+            direction = Vector2.left + Vector2.up;
         }
         else
         {
-            direction = Vector2.right;
+            direction = Vector2.right + Vector2.down;
         }
 
         rb.velocity = direction * speed;

@@ -10,6 +10,13 @@ public class Player : MonoBehaviour
     [SerializeField] private float velocity = 5;
     [SerializeField] public bool isPlayer;
     [SerializeField] private int playerId;
+    void Awake()
+    {
+        if (playerId==2 && GameType.instancia != null)
+        {
+            isPlayer = GameType.instancia.MLocal;
+        }
+    }
     void Update()
     {
         if (isPlayer)
